@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+//@import "~material-design-icons/iconfont/material-icons.css";
+
+.one-above-all {
+  z-index: $zindex-tooltip;
+}
+
+
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .nav-link.active {
+  color:$primary;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color:$primary;
+}
+

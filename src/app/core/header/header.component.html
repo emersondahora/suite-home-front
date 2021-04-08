@@ -1,0 +1,26 @@
+<header>
+  <div class="fixed-top one-above-all">
+    <ap-loading></ap-loading>
+    <ap-alert></ap-alert>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid ">
+      <a class="navbar-brand" href="#">Suite Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item " *ngFor="let item of menuItens">
+            <a class="nav-link d-flex " [ngClass]="{'active': item?.active}" aria-current="page" href="#">
+              <span class="material-icons">{{item.icon}}</span>
+              <span class="ms-1">{{item.label}}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</header>

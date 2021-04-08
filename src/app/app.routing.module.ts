@@ -1,7 +1,29 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { GlobalErrorComponent } from './errors/global-error/globa-error.component';
+import { NotFoundComponent } from './errors/not-found/not-found.component';
+
+const routes: Routes = [
+  {
+    path: 'not-found',
+    component: NotFoundComponent,
+    data: {
+      title: 'Not Found',
+    },
+  },
+  {
+    path: 'error',
+    component: GlobalErrorComponent,
+    data: {
+      title: 'Error',
+    },
+  },
+  {
+    path: '**',
+    redirectTo: 'not-found',
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

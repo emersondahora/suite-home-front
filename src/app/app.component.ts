@@ -1,9 +1,10 @@
+import { MainContentService } from './core/main-content/main-content.service';
 import { OnInit } from '@angular/core';
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { filter, map, switchMap } from 'rxjs/operators';
+import { filter, map, switchMap, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,8 @@ export class AppComponent implements OnInit {
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    private titleService: Title
+    private titleService: Title,
+    private mainContantService: MainContentService
   ) {}
 
   ngOnInit(): void {
@@ -31,10 +33,13 @@ export class AppComponent implements OnInit {
       )
       .pipe(switchMap((route) => route.data))
       .subscribe({
-        next: (event: any) => this.setTitle(event.title || 'Suite Home'),
+        next: (event: any) => {
+          this.titleService.setTitle(
+            'Suite Home ' + (event.title && '- ' + event.title)
+          );
+          this.mainContantService.setActiveTab(event.tab);
+        },
       });
   }
-  setTitle(title: string): void {
-    this.titleService.setTitle(title);
-  }
+  setTitle(title: string): void {}
 }

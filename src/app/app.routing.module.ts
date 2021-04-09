@@ -6,6 +6,19 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
 
 const routes: Routes = [
   {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'financial/budget',
+  },
+  {
+    path: 'financial',
+    loadChildren: () =>
+      import('./financial/financial.module').then(
+        (module) => module.FinancialModule
+      ),
+  },
+
+  {
     path: 'not-found',
     component: NotFoundComponent,
     data: {

@@ -1,0 +1,17 @@
+<main class="container main-content">
+  <h1 class="main-title">
+    <span class="material-icons">{{icon}}</span>
+    <span>{{title}}</span>
+  </h1>
+
+  <ul class="nav nav-tabs main-content-tabs">
+    <li class="nav-item" *ngFor="let tab of tabs">
+      <a class="nav-link" [routerLink]="tab.link" [ngClass]="{'active': tab.id == activeTab}">{{ tab.label }}</a>
+    </li>
+  </ul>
+  <section class="main-content-page">
+    <ng-content></ng-content>
+  </section>
+
+
+</main>

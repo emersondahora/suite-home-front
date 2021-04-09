@@ -5,7 +5,9 @@
 .one-above-all {
   z-index: $zindex-tooltip;
 }
-
+h1 .material-icons {
+  font-size: inherit;
+}
 
 .navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .nav-link.active {
   color:$primary;

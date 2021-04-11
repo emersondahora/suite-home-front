@@ -1,17 +1,21 @@
 import { MainContentTab } from './../core/main-content/main-content';
 import { Component, OnInit } from '@angular/core';
-import { financialChildren } from './financial-routing.module';
+//import { financialChildren } from './financial-routing.module';
 
-const tabs: MainContentTab[] = [
+const financialChildren = [
   {
-    id: 'budget',
-    label: 'Orçamento',
-    link: '/financial/budget',
+    path: 'budget',
+    data: {
+      title: 'Orçamento',
+      tab: 'budget',
+    },
   },
   {
-    id: 'credit-card',
-    label: 'Cartões',
-    link: '/financial/credit-card',
+    path: 'credit-card',
+    data: {
+      title: 'Cartões',
+      tab: 'credit-card',
+    },
   },
 ];
 

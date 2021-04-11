@@ -1,0 +1,78 @@
+<div #entryFormModal class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{ title }}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="entryForm">
+          <div class="mb-3">
+            <label for="expectedDate" class="form-label">Data prevista</label>
+            <input
+              autocomplete="off"
+              formControlName="expectedDate"
+              type="date"
+              class="form-control"
+              id="expectedDate"
+              placeholder="Data prevista"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="description" class="form-label">Descrição</label>
+            <input
+              formControlName="description"
+              type="text"
+              class="form-control"
+              id="description"
+              placeholder="Descrição"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="amount" class="form-label">Valor</label>
+            <input
+              autocomplete="off"
+              formControlName="amount"
+              type="number"
+              class="form-control"
+              min="0"
+              id="amount"
+              placeholder="Valor"
+            />
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="mb-3 form-check">
+                <input
+                  formControlName="amountDefined"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="amountDefined"
+                />
+                <label class="form-check-label" for="amountDefined"> Valor final definido </label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="mb-3 form-check">
+                <input
+                  formControlName="accomplished"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="accomplished"
+                />
+                <label class="form-check-label" for="accomplished"> Valor recebido </label>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-save" (click)="save()">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>

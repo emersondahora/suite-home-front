@@ -1,4 +1,4 @@
-<main class="container main-content">
+<main class="container main-content flex-grow-1 d-flex flex-column">
   <h1 class="main-title">
     <span class="material-icons">{{icon}}</span>
     <span>{{title}}</span>
@@ -9,7 +9,7 @@
       <a class="nav-link" [routerLink]="tab.link" [ngClass]="{'active': tab.id == activeTab}">{{ tab.label }}</a>
     </li>
   </ul>
-  <section class="main-content-page">
+  <section class="main-content-page flex-grow-1">
     <ng-content></ng-content>
   </section>
 

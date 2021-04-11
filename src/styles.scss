@@ -1,19 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
+//@import '../node_modules/bootstrap/scss/bootstrap.scss';
 //@import "~material-design-icons/iconfont/material-icons.css";
+@import 'bootstrap/scss/bootstrap-utilities.scss';
+
+body {
+  min-height: 100vh;
+  display: flex;
+}
+
+app-root, app-root > ng-component, shm-main-content {
+  flex:1;
+  display: flex;
+  flex-direction: column;
+}
 
 .one-above-all {
   z-index: $zindex-tooltip;
 }
-h1 .material-icons {
-  font-size: inherit;
+
+.btn-cancel {
+  @include button-variant($red, $red);
 }
 
-.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .nav-link.active {
-  color:$primary;
+.btn-save {
+  @include button-variant($green, $green);
 }
-
-.navbar-light .navbar-nav .nav-link:hover {
-  color:$primary;
-}
-

@@ -1,15 +1,22 @@
-import { CoreModule } from './../core/core.module';
+import { BudgetModule } from './budget/budget.module';
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { FinancialRoutingModule } from './financial-routing.module';
+import { CoreModule } from './../core/core.module';
+import { FormatCurrencyModule } from '../shared/pipe/format-currency/format-currency/format-currency.module';
+
 import { FinancialComponent } from './financial.component';
-import { BudgetComponent } from './budget/budget.component';
 import { CreditCardComponent } from './credit-card/credit-card.component';
+import { FinancialRoutingModule } from './financial-routing.module';
 
 @NgModule({
-  declarations: [FinancialComponent, BudgetComponent, CreditCardComponent],
-  exports: [FinancialComponent],
-  imports: [CommonModule, FinancialRoutingModule, CoreModule],
+  declarations: [FinancialComponent,  CreditCardComponent],
+  imports: [
+    CommonModule,
+    CoreModule,
+    FinancialRoutingModule,
+    BudgetModule
+  ],
 })
 export class FinancialModule {}

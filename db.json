@@ -1,0 +1,74 @@
+{
+  "entries": [
+    {
+      "id": 3,
+      "description": "Receita teste",
+      "amount": 461.91,
+      "month": "2021-04-01",
+      "expectedDate": "2021-04-04",
+      "type": "INCOME",
+      "amountDefined": true,
+      "accomplished": true
+    },
+    {
+      "id": 5,
+      "description": "Capacete",
+      "amount": 180,
+      "month": "2021-04-01",
+      "expectedDate": "2021-04-01",
+      "type": "INCOME",
+      "amountDefined": true,
+      "accomplished": false
+    },
+    {
+      "id": 6,
+      "description": "Matheus",
+      "amount": 73.91,
+      "month": "2021-04-01",
+      "expectedDate": "2021-04-01",
+      "type": "INCOME",
+      "amountDefined": false,
+      "accomplished": false
+    },
+    {
+      "description": "Teste Vegano",
+      "expectedDate": "2021-04-11",
+      "month": "2021-04-01T03:00:00.000Z",
+      "type": "INCOME",
+      "amount": 5000,
+      "accomplished": true,
+      "amountDefined": true,
+      "id": 7
+    },
+    {
+      "description": "Teste Vegano",
+      "expectedDate": "2021-04-11",
+      "month": "2021-04-01T03:00:00.000Z",
+      "type": "INCOME",
+      "amount": 5000,
+      "accomplished": true,
+      "amountDefined": true,
+      "id": 8
+    },
+    {
+      "description": "Teste Vegano",
+      "expectedDate": "2021-04-11",
+      "month": "2021-04-01T03:00:00.000Z",
+      "type": "INCOME",
+      "amount": 5000,
+      "accomplished": false,
+      "amountDefined": true,
+      "id": 9
+    },
+    {
+      "description": "Teste Vegano",
+      "expectedDate": "2021-04-11",
+      "month": "2021-04-01T03:00:00.000Z",
+      "type": "INCOME",
+      "amount": 5000,
+      "accomplished": true,
+      "amountDefined": true,
+      "id": 10
+    }
+  ]
+}

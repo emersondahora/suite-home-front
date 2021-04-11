@@ -1,3 +1,13 @@
+@import 'bootstrap/scss/bootstrap-utilities.scss';
+
 header {
   min-height: 56px;
+}
+
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .nav-link.active {
+  color:$primary;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color:$primary;
 }

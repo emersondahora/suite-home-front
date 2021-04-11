@@ -9,11 +9,11 @@ import { GlobalErrorHandler } from './global-error-handle/global-error-handle';
 @NgModule({
   declarations: [NotFoundComponent, GlobalErrorComponent],
   imports: [CommonModule, RouterModule],
-  providers: [
+  /*providers: [
     {
       provide: ErrorHandler,
       useClass: GlobalErrorHandler,
     },
-  ],
+  ],*/
 })
 export class ErrorsModule {}

@@ -14,7 +14,7 @@ export class GlobalErrorHandler implements ErrorHandler {
   handleError(error: any): void {
     const location = this.injector.get(LocationStrategy);
     // const userService = this.injector.get(UserService);
-    const serverLogService = this.injector.get(ServerLogService);
+    // const serverLogService = this.injector.get(ServerLogService);
     const router = this.injector.get(Router);
 
     const url = location instanceof PathLocationStrategy ? location.path() : '';
@@ -26,7 +26,8 @@ export class GlobalErrorHandler implements ErrorHandler {
     }
     StackTrace.fromError(error).then((stackFrames) => {
       const stackAsString = stackFrames.map((sf) => sf.toString()).join('\n');
-
+      console.log(stackAsString);
+      /*
       serverLogService
         .log({
           message,
@@ -41,6 +42,7 @@ export class GlobalErrorHandler implements ErrorHandler {
             console.log('Fail to send error log to server');
           }
         );
+        */
     });
   }
 }
